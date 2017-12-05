@@ -23,6 +23,7 @@ Global
 		advent_of_code\advent_of_code.vcxitems*{8b01b573-827f-4696-950b-220c3de4d460}*SharedItemsImports = 4
 		advent_of_code\advent_of_code.vcxitems*{9613c78d-0759-44c9-9a4c-689f29472500}*SharedItemsImports = 9
 		advent_of_code\advent_of_code.vcxitems*{de4d31bb-3f29-4b3c-89e2-1a7bed72b928}*SharedItemsImports = 4
+		advent_of_code\advent_of_code.vcxitems*{fe043452-42e9-4420-b236-e4977f8261f0}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64

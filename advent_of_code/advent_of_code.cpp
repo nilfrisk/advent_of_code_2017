@@ -6,6 +6,32 @@
 #include <algorithm>
 
 
+std::vector<int> advent_of_code::week_5::import_data(){
+
+    auto data = advent_of_code::get_data("..//day_5_part_1_input.txt");
+    assert(!data.empty());
+
+    auto lines = std::tokenize(data, "\n");
+    assert(!lines.empty());
+
+    data.clear();
+
+    std::vector<int> jump_instructions;
+    std::stringstream string_stream;
+    int temp(0);
+    std::for_each(lines.cbegin(), lines.cend(), [&jump_instructions, &string_stream, &temp](const std::string line){
+        string_stream << line;
+        string_stream >> temp;
+        assert(!string_stream.fail());
+
+        jump_instructions.push_back(temp);
+
+        //reset vars
+        temp = 0;
+        std::reset(string_stream);
+    });
+    return(jump_instructions);
+}
 std::vector<std::pair<std::pair<int, int>, size_t>> advent_of_code::spiral_memory::get_position_and_values(const size_t number){
 
     assert(0 != number);

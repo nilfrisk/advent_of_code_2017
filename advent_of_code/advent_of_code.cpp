@@ -6,6 +6,31 @@
 #include <algorithm>
 
 
+std::vector<size_t> advent_of_code::week_6::import_data(){
+    auto data = advent_of_code::get_data("..//day_6_part_1_input.txt");
+    assert(!data.empty());
+
+    auto memory_bank_strings = std::tokenize(data, "\t");
+    assert(!memory_bank_strings.empty());
+
+    data.clear();
+
+    std::vector<size_t> memory_banks;
+    std::stringstream string_stream;
+    size_t temp(0);
+    std::for_each(memory_bank_strings.cbegin(), memory_bank_strings.cend(), [&memory_banks, &string_stream, &temp](const std::string line){
+        string_stream << line;
+        string_stream >> temp;
+        assert(!string_stream.fail());
+
+        memory_banks.push_back(temp);
+
+        //reset vars
+        temp = 0;
+        std::reset(string_stream);
+    });
+    return(memory_banks);
+}
 std::vector<int> advent_of_code::week_5::import_data(){
 
     auto data = advent_of_code::get_data("..//day_5_part_1_input.txt");

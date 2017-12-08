@@ -1,5 +1,7 @@
 #pragma once
 
+
+
 #include <vector>
 #include <sstream>
 
@@ -12,6 +14,9 @@ namespace advent_of_code{
     
     namespace week_5{
         std::vector<int> import_data();
+    }
+    namespace week_6{
+        std::vector<size_t> import_data();
     }
 
     size_t get_manhattan_distance(const std::pair<int, int> this_item, const std::pair<int, int> that_item);
